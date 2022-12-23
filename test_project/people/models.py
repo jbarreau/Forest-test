@@ -9,6 +9,7 @@ class Human(models.Model):
 
     birth_date = models.DateField(max_length=20)
 
+
 class Person(Human):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
@@ -25,7 +26,11 @@ class Artist(models.Model):
         # ...
     )
 
-    person = models.OneToOneField(Person, on_delete=models.CASCADE, related_name="artist")
+    person = models.OneToOneField(
+        Person,
+        on_delete=models.CASCADE,
+        related_name="artist"
+    )
     work = models.CharField(max_length=20, choices=WORK_CHOICES)
 
     def __str__(self) -> str:
