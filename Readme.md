@@ -5,6 +5,7 @@
 # Limitations
 
 # Going further
+- make the introspect package work with multiple databases projects
 
 # Other
 ## Test Project explainations
