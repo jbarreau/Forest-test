@@ -1,4 +1,11 @@
+# python related
 **/__pycache__/**
-**.log
 /venv
+
+# django related
+**.log
 test_project/db.sqlite3
+
+# python packaging 
+django-introspectmodels/dist/
+django-introspectmodels/*.egg-info/
