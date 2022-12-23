@@ -1,6 +1,6 @@
 # python related
 **/__pycache__/**
-/venv
+test_project/venv
 
 # django related
 **.log
@@ -9,3 +9,6 @@ test_project/db.sqlite3
 # python packaging 
 django-introspectmodels/dist/
 django-introspectmodels/*.egg-info/
+
+# vscode
+.vscode/
