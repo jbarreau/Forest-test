@@ -1,4 +1,4 @@
 **/__pycache__/**
 **.log
 /venv
-# test-project/db.sqlite3
+test_project/db.sqlite3

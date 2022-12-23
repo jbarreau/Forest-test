@@ -1,0 +1,1 @@
+[{"model": "people.person", "pk": 1, "fields": {"first_name": "Freddie", "last_name": "Mercury", "birth_date": "1946-09-05"}}, {"model": "people.artist", "pk": 1, "fields": {"person": 1, "work": "singer"}}]
