@@ -8,8 +8,8 @@ test_project/db.sqlite3
 test_project/.forestadmin-schema.json
 
 # python packaging
-django-introspectmodels/dist/
-django-introspectmodels/*.egg-info/
+dist/
+*.egg-info/
 
 # vscode
 .vscode/
