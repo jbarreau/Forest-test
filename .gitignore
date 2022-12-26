@@ -6,6 +6,9 @@ test_project/venv
 **.log
 test_project/db.sqlite3
 test_project/.forestadmin-schema.json
+test_project/.coverage
+# the debugging simlink
+test_project/introspectmodels
 
 # python packaging
 dist/

@@ -32,6 +32,15 @@ The '.forestadmin-schema.json' is generated at server startup ; but you can recr
 		python manage.py introspectmodels --output-file .forestadmin-schema.json
 Without the '--output-file' parameter, it will print the file in stdout
 
+# launch test for 'test_project'
+Use the the command `./launch_test.sh` it will :
+- remove virtual env (test_project/venv) if exists
+- buil the package
+- make a new venv from scratch
+- install package (requirements.txt)
+- launch tests with coverage (generate coverage.xml file)
+- launch
+
 # Output file format
 An exemple of output json file:
 
