@@ -1,7 +1,7 @@
 django<5
-../dist/django-introspectmodels-0.1.tar.gz
+../dist/django-introspectmodels-0.2.tar.gz
 # django-introspectmodels @ https://github.com/jbarreau/Forest-test/
-# django-introspectmodels
+# django-introspectmodels  # from pypi
 coverage
 
 black # vscode

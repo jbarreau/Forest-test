@@ -2,3 +2,7 @@
 [1mintrospectmodels/introspect_utils/models_introspector.py[m[36m:[m92[36m:[m80[36m:[m [1m[31mE501[m line too long (89 > 79 characters)
 [1mintrospectmodels/tests.py[m[36m:[m56[36m:[m80[36m:[m [1m[31mE501[m line too long (86 > 79 characters)
 [1mintrospectmodels/tests.py[m[36m:[m72[36m:[m80[36m:[m [1m[31mE501[m line too long (86 > 79 characters)
+[1mintrospectmodels/apps.py[m[36m:[m13[36m:[m80[36m:[m [1m[31mE501[m line too long (81 > 79 characters)
+[1mintrospectmodels/introspect_utils/models_introspector.py[m[36m:[m92[36m:[m80[36m:[m [1m[31mE501[m line too long (89 > 79 characters)
+[1mintrospectmodels/tests.py[m[36m:[m56[36m:[m80[36m:[m [1m[31mE501[m line too long (86 > 79 characters)
+[1mintrospectmodels/tests.py[m[36m:[m72[36m:[m80[36m:[m [1m[31mE501[m line too long (86 > 79 characters)
