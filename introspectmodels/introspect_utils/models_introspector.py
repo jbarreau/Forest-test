@@ -26,9 +26,10 @@ class ModelIntrospector:
                     break
             else:
                 databases_name = [c.alias for c in connections.all()]
-                raise NotDefaultDatabaseError(
+                LOGGER.warning(
                     f"cannot found a database named default in your multiple database settings. Founds : {', '.join(databases_name)}"  # noqa: E501
                 )
+                self.connection = None
 
     def introspect_models(self):
         self._check_connections()
@@ -61,11 +62,15 @@ class ModelIntrospector:
         for field in model._meta.get_fields():
             ret_field = {
                 "field_name": field.name,
-                "model_type": field.__class__.__name__,
+                "field_type": field.__class__.__name__,
                 "is_nullable": field.null,
                 "is_relation": field.is_relation,
-                "db_type": field.db_type(self.connection),
             }
+            if self.connection is not None:
+                ret_field["db_type"] = field.db_type(self.connection)
+            else:
+                ret_field["db_type"] = None
+
             if field.is_relation:
                 ret_field.update({
                     "related_model": field.related_model.__name__,

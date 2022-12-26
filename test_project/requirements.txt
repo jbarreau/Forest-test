@@ -15,7 +15,7 @@ django==4.1.4
     #   -r requirements.in
     #   django-introspectmodels
 # django-introspectmodels @ file:///home/julien/git/Forest-test/django-introspectmodels/dist/django-introspectmodels-0.1.tar.gz
-../django-introspectmodels/dist/django-introspectmodels-0.1.tar.gz
+../dist/django-introspectmodels-0.1.tar.gz
     # via -r requirements.in
 flake8==6.0.0
     # via -r requirements.in
