@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Band(models.Model):
     name = models.CharField(max_length=60)
     retired = models.BooleanField(default=False)
@@ -19,9 +20,10 @@ class Album(models.Model):
     def __str__(self) -> str:
         return f"{self.name}: {self.author}"
 
+
 class Song(models.Model):
     title = models.CharField(max_length=60)
-    album = models.ForeignKey(Album, on_delete=models.CASCADE, related_name="songs")
+    album = models.ForeignKey(Album, on_delete=models.CASCADE, related_name="songs")  # noqa:E501
     order = models.IntegerField()
     mp3_file = models.FileField(null=True, blank=True)
 

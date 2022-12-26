@@ -5,8 +5,6 @@ from django.apps import AppConfig
 from django.db.models import Model
 from django.db.transaction import connections
 
-from introspectmodels.exceptions import NotDefaultDatabaseError
-
 
 LOGGER = logging.getLogger()
 
@@ -91,4 +89,6 @@ class ModelIntrospector:
         return ret
 
     def get_output(self):
+        """ method is here if we need modification of the introspected data in the future
+        """
         return self._introspected_data

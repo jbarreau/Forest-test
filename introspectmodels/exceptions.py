@@ -1,2 +1,0 @@
-class NotDefaultDatabaseError(NotImplementedError):
-    pass
