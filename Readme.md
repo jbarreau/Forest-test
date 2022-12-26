@@ -39,7 +39,7 @@ Use the the command `./launch_test.sh` it will :
 - make a new venv from scratch
 - install package (requirements.txt)
 - launch tests with coverage (generate coverage.xml file)
-- launch
+- launch flake8 linter (generate flake8.txt file)
 
 # Output file format
 An exemple of output json file:
@@ -116,11 +116,12 @@ An exemple of output json file:
 
 # Limitations / what to do for next releases
 - implement include/exclude models/apps in settings.py. To have a file that describe just that we want
-- make the introspect package work with multiple databases projects
+- make the introspect package work with multiple databases projects for the db field introspection
 - package a wheel file
-- implement test (or more tests)
-- code coverage
-- code linting
+- implement more tests (never enough)
+## and further
+- auto create serializers and viewsets for django-rest-framework
+- generate a diagram of the introspected models
 
 # Other
 ## Test Project explainations

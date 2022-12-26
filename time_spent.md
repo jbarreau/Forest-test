@@ -10,8 +10,7 @@
 - document the package: 1 hour
 - publish on pypi: 1 hour
 - tests: 1 hour
-
-- TODO: package as wheel file
+- finishing Readme.md: 30 min
 
 ## total
 total estimated time is around 9 hours
