@@ -1,42 +1,62 @@
-# Installation
-## Install the django-package
-* From pypi
+================
+Introspectmodels
+================
 
-		pip install django-introspectmodels
+introspectmodels is a Django app to introspect models in your django projetct.
+It will create a '.forestadmin-schema.json' file describing the models you're using at server start.
 
-* Or from github
+-----------
+Quick start
+-----------
+1. Install
+    * From pypi::
+
+        pip install django-introspectmodels
+    * Or from github
 
 		pip install git+https://github.com/jbarreau/Forest-test/
 
-* Or from sources
+    * Or from sources ::
 
-		pip install setuptools>=40.8.0
-		git clone https://github.com/jbarreau/Forest-test/
-		cd django-introspection
-		python3 setup.py sdist
-		#in your project environement :
-		pip install dist/django-introspectmodels-0.1.tar.gz
+        pip install setuptools>=40.8.0
+        git clone https://github.com/jbarreau/Forest-test/
+        cd django-introspection
+        python3 setup.py sdist
+        # in your project environement :
+        pip install dist/django-introspectmodels-0.1.tar.gz
 
-## Add the package to your project
 
-In your project settings.py, add  "introspectmodels" to your INSTALLED_APPS setting like this:
+2. Add "introspectmodels" to your INSTALLED_APPS setting like this::
 
-	INSTALLED_APPS = [
-		...
-		'introspectmodels',
-	]
+    INSTALLED_APPS = [
+        ...
+        'introspectmodels',
+    ]
 
-# Usage
-The '.forestadmin-schema.json' is generated at server startup ; but you can recreate it  using :
 
-		python manage.py introspectmodels --output-file .forestadmin-schema.json
-Without the '--output-file' parameter, it will print the file in stdout
+3. Start the server (python manage runserver or with an apache or nginx stack) or run the following manage command :
+    ``python manage.py introspectmodels --output-file .forestadmin-schema.json``
 
-# Output file format
-An exemple of output json file:
+4. Watch the ``$DJANGO_PROJECT_ROOT/.forestadmin-schema.json`` file.
+
+-----
+Usage
+-----
+
+The '.forestadmin-schema.json' is generated at server startup ; but you can recreate it using the manage command ::
+
+    python manage.py introspectmodels --output-file .forestadmin-schema.json
+
+Without the '--output-file' parameter, it will print the file in stdout.
+
+
+------------------
+Output file format
+------------------
+An exemple of output json file::
 
 	{
-		"apps": [  **# list of apps**
+		"apps": [  # list of apps
 			{
 				"app_name": "music",  # name of the app
 				"models": [  # models of the app
@@ -105,7 +125,10 @@ An exemple of output json file:
 		]
 	}
 
-# Limitations / what to do for next releases
+
+------------------------------------------
+Limitations / what to do for next releases
+------------------------------------------
 - implement include/exclude models/apps in settings.py. To have a file that describe just that we want
 - make the introspect package work with multiple databases projects
 - package a wheel file
@@ -113,7 +136,10 @@ An exemple of output json file:
 - code coverage
 - code linting
 
-# Other
-## Test Project explainations
-A simple music library with limited features that can provides most of the classic fields type and relations.\
-Some relations, abstract class, ... are useless for this dummy app. The only pupose of them is to test the comportement of introspect model package.
+-----
+Other
+-----
+Test Project explainations
+==========================
+| A simple music library with limited features that can provides most of the classic fields type and relations.
+| Some relations, abstract class, ... are useless for this dummy app. The only pupose of them is to test the comportement of introspect model package.
