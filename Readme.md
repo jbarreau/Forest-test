@@ -117,6 +117,7 @@ Use the the command `./launch_test.sh` it will :
 - implement include/exclude models/apps in settings.py. To have a file that describe just that we want
 - make the introspect package work with multiple databases projects for the db field introspection
 - package a wheel file
+- study the license ; I took GPL knowing is an opensource one without studying more
 - improve compatibility with older versions of python and django
 - implement more tests (never enough)
 
