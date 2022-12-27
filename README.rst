@@ -1,7 +1,6 @@
 ================
 Introspectmodels
 ================
-
 introspectmodels is a Django app to introspect models in your django projetct.
 It will create a '.forestadmin-schema.json' file describing the models you're using at server start.
 
@@ -20,7 +19,6 @@ Quick start
 
         pip install setuptools>=40.8.0
         git clone https://github.com/jbarreau/Forest-test/
-        cd django-introspection
         python3 setup.py sdist
         # in your project environement :
         pip install dist/django-introspectmodels-0.1.tar.gz
@@ -42,13 +40,11 @@ Quick start
 -----
 Usage
 -----
-
 The '.forestadmin-schema.json' is generated at server startup ; but you can recreate it using the manage command ::
 
     python manage.py introspectmodels --output-file .forestadmin-schema.json
 
 Without the '--output-file' parameter, it will print the file in stdout.
-
 
 ------------------
 Output file format
@@ -125,16 +121,31 @@ An exemple of output json file::
 		]
 	}
 
+------------------------------
+launch test for 'test_project'
+------------------------------
+Use the the command `./launch_test.sh` it will :
+
+* remove virtual env (test_project/venv) if exists
+* build the package
+* make a new venv from scratch
+* install packages (requirements.txt)
+* launch tests with coverage (generate coverage.xml file)
+* launch flake8 linter (generate flake8.txt file)
 
 ------------------------------------------
 Limitations / what to do for next releases
 ------------------------------------------
-- implement include/exclude models/apps in settings.py. To have a file that describe just that we want
-- make the introspect package work with multiple databases projects
-- package a wheel file
-- implement test (or more tests)
-- code coverage
-- code linting
+* implement include/exclude models/apps in settings.py. To have a file that describe just that we want
+* make the introspect package work with multiple databases projects for the db field introspection
+* package a wheel file
+* improve compatibility with older versions of python and django
+* implement more tests (never enough)
+
+And further
+===========
+* auto create serializers and viewsets for django-rest-framework
+* generate a diagram of the introspected models
 
 -----
 Other

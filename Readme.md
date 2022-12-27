@@ -12,13 +12,11 @@
 
 		pip install setuptools>=40.8.0
 		git clone https://github.com/jbarreau/Forest-test/
-		cd django-introspection
 		python3 setup.py sdist
 		#in your project environement :
 		pip install dist/django-introspectmodels-0.1.tar.gz
 
 ## Add the package to your project
-
 In your project settings.py, add  "introspectmodels" to your INSTALLED_APPS setting like this:
 
 	INSTALLED_APPS = [
@@ -32,20 +30,11 @@ The '.forestadmin-schema.json' is generated at server startup ; but you can recr
 		python manage.py introspectmodels --output-file .forestadmin-schema.json
 Without the '--output-file' parameter, it will print the file in stdout
 
-# launch test for 'test_project'
-Use the the command `./launch_test.sh` it will :
-- remove virtual env (test_project/venv) if exists
-- buil the package
-- make a new venv from scratch
-- install package (requirements.txt)
-- launch tests with coverage (generate coverage.xml file)
-- launch flake8 linter (generate flake8.txt file)
-
 # Output file format
 An exemple of output json file:
 
 	{
-		"apps": [  **# list of apps**
+		"apps": [  # list of apps
 			{
 				"app_name": "music",  # name of the app
 				"models": [  # models of the app
@@ -114,11 +103,23 @@ An exemple of output json file:
 		]
 	}
 
+# launch test for 'test_project'
+Use the the command `./launch_test.sh` it will :
+- remove virtual env (test_project/venv) if exists
+- build the package
+- make a new venv from scratch
+- install packages (requirements.txt)
+- launch tests with coverage (generate coverage.xml file)
+- launch flake8 linter (generate flake8.txt file)
+
+
 # Limitations / what to do for next releases
 - implement include/exclude models/apps in settings.py. To have a file that describe just that we want
 - make the introspect package work with multiple databases projects for the db field introspection
 - package a wheel file
+- improve compatibility with older versions of python and django
 - implement more tests (never enough)
+
 ## and further
 - auto create serializers and viewsets for django-rest-framework
 - generate a diagram of the introspected models
